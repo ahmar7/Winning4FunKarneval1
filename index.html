@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet"  href="style.css" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Oswald:300,400,700|PT+Sans" rel="stylesheet">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<title>Net4fun</title>
+</head>
+<body>
+<div class="mobileheader" style="display:none;">
+    <a href="#"><img class="logo" src="assets/logo_green_normal2.png"/></a>
+</div>
+
+<!-- Web Form -->
+
+        
+
+
+    
+
+<header class="header">
+    <div class="content-center">
+            <div class="spins-text">
+                <a href="#" class="desktoplogo"><img class="logo" src="assets/logo_green_normal2.png"/></a>
+                <h2>Join the Bonus Parade!</h2>
+                <h1> Welcome Bonus </br> & 100 Free Spins!</h1> 
+            </div>
+            <div class="form-and-image">
+                <div class="image-container"><img src="assets/form-image.png"></div>
+                <div class="form-container">
+                    <form  id="contact_form" name="contact_form" method="post" >
+                        <h3>Free Registration!</h3>
+                        <span id="errfn" style="color:red;font-size:11px"></span>
+                        <input type="email" name ="Email" id="Email" placeholder="Email" required size="32"/><br>
+                        <input type="hidden" name ="firstname" id="firstname" value="Member"/> 
+                        <input type="hidden" id="Country" name="Country" value="Romania"/>
+                        <input type="hidden" id="IP" name="IP" value="213.233.84.74"/>
+                        <input type="hidden" id="date" name="date" value="10/28/2018 15:29"/>
+                        <input type="hidden" id="Source" name="Source" value=""/>
+                        <input type="hidden" id="Snippet" name="Snippet" value=""/>
+                        <input type="hidden" id="Full_Link" name="Full_Link" value="http://winning4fun.com/?karneval/snippet"/>
+                        <input type="hidden" id="sourceid" name="sourceid" value=""/>
+                        <div id="div1"></div></td></tr><tr><td width="350">&nbsp;</td><td align="right">
+                        <a id="myLink" href="#" onclick="yallla();nameit()">Get My Bonus!</a>
+                        <p>we respect your <a href="PrivacyPolicy.pdf">privacy</a></p>
+                    </form>
+                </div>
+        </div>
+    </div>
+</header>
+
+<!-- this make the enter key work -->
+<script>
+
+$(contact_form).live('keyup', function (evt) {
+    var e = evt || event;
+    var code = e.keyCode || e.which;
+    if (code === 13) {  // 13 is the js key code for Enter
+        $(myLink).trigger('click');
+    }
+});
+</script>
+<!-- this make the enter key work -->
+
+<!-- fixes return redirection issue -->
+<script>
+$(function() {
+    $("form").submit(function() { return false; });
+});
+</script>
+
+<!-- fixes return redirection issue -->
+
+<script type="text/javascript">
+
+function PostData(callback) {
+    // 1. Create XHR instance - Start
+    var xhr;
+    if (window.XMLHttpRequest) {
+        xhr = new XMLHttpRequest();
+    }
+    else if (window.ActiveXObject) {
+        xhr = new ActiveXObject("Msxml2.XMLHTTP");
+    }
+    else {
+        throw new Error("Ajax is not supported by this browser");
+    }
+    // 1. Create XHR instance - End
+    
+    // 2. Define what to do when XHR feed you the response from the server - Start
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            if (xhr.status == 200 && xhr.status < 300) {
+                document.getElementById('div1').innerHTML = xhr.responseText;
+            }
+        }
+    }
+    // 2. Define what to do when XHR feed you the response from the server - Start
+
+var Email = document.getElementById("Email").value;
+var firstname = document.getElementById("firstname").value;
+var Source = document.getElementById("Source").value;
+var date = document.getElementById("date").value;
+var IP = document.getElementById("IP").value;
+var Snippet = document.getElementById("Snippet").value;
+var Full_Link = document.getElementById("Full_Link").value;
+  var Country = document.getElementById("Country").value;
+  var sourceid = document.getElementById("sourceid").value;
+    
+    xhr.open('POST', 'https://reportsapi.zoho.com/api/xhr.send("Email=" + Email + "&firstname=" + firstname + "&source=" + Source + "&Date_Collected=" + date + "&IP_Address=" + IP + "&Collected_Snippet=" + Snippet + "&Web_Form_URL=" + Full_Link + "&Country=" + Country + "&Source_ID=" + sourceid');
+    
+       
+    // 3. Specify your action, location and Send to the server - End
+    callback();
+}
+function nameit ( )
+{
+if ( document.contact_form.firstname.value == "" )
+    {
+         document.getElementById('errfn2').innerHTML="Please enter your name.<br>";
+        valid = false;
+    }
+}
+
+var email = document.getElementById('Email');
+var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+function yallla ( )
+{
+    valid = true;
+
+    if (!filter.test(email.value))
+    {
+        document.getElementById('errfn').innerHTML="Please fill in a valid email address.<br>";
+        valid = false;
+    }
+else { if ( document.contact_form.firstname.value == "" )
+    {
+         document.getElementById('errfn2').innerHTML="Please enter your name.<br>";
+        valid = false;
+    }
+    else{
+PostData(function() {
+  PostmoreData(function() {
+    anothert(function() {
+      //All three functions have completed, in order.
+    });
+  });
+});
+}}};
+</script>
+<script type="text/javascript">
+<!--
+var email = document.getElementById('Email');
+var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+function anothert ( )
+{
+    valid = true;
+
+    if (!filter.test(email.value))
+    {
+        
+        valid = false;
+    }
+else { if ( document.contact_form.firstname.value == "" )
+    {
+        
+        valid = false;
+    }
+    else{
+setTimeout(function() {
+window.location.href="";
+callback();
+}, 1500);}}}
+
+
+//-->
+</script>
+<script type="text/javascript">
+function PostmoreData(callback) {
+    // 1. Create XHR instance - Start
+    var xhr;
+    if (window.XMLHttpRequest) {
+        xhr = new XMLHttpRequest();
+    }
+    else if (window.ActiveXObject) {
+        xhr = new ActiveXObject("Msxml2.XMLHTTP");
+    }
+    else {
+        throw new Error("Ajax is not supported by this browser");
+    }
+    // 1. Create XHR instance - End
+    
+    // 2. Define what to do when XHR feed you the response from the server - Start
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            if (xhr.status == 200 && xhr.status < 300) {
+                document.getElementById('div1').innerHTML = xhr.responseText;
+            }
+        }
+    }
+    // 2. Define what to do when XHR feed you the response from the server - Start
+
+    var Email = document.getElementById("Email").value;
+        var firstname = document.getElementById("firstname").value;
+var Snippet = document.getElementById("Snippet").value;
+ 
+}
+
+</script>
+<!-- Web Form -->
+
+<section class="steps content-center">
+    <div class="steps-border">
+        <div class="step step1">
+            <img src="assets/step1.png">
+            <h4>Fill in the form above.</h4>
+        </div>
+        <div class="step step2">
+            <img src="assets/step2.png">
+            <h4>Click "Get My Bonus!"</h4>
+        </div>
+        <div class="step step3">
+            <img src="assets/step3.png">
+            <h4>Free Spins!</h4>
+        </div>
+    </div>
+</section>
+<section class="ribbons">
+    <div class="content-center">
+        <div class="ribbon-left"><img src="assets/ribbonleft.png"/></div>
+        <div class="ribbon-right"><img src="assets/ribbonright.png"></div>
+    </div>
+</section>
+<section class="termsandcond content-center">
+    <h5>Winning4Fun © 2018 All Rights Reserved | Complied with GDPR rules and regulation | </h5><a class="tandc" href="T&C.pdf" target="_blank">Terms &amp; Conditions</a>
+    
+    <p>© Winning4Fun is available only to persons older than 18 years of age, or the legal age of majority in their jurisdiction, whichever is greater. You will be responsible for ensuring that you do not violate any laws of your jurisdiction, including but not limited to copyright laws. Net4fun does not accept wagers of any kind, nor does it encourage or endorse gambling activities that may lead to financial loss. Gambling-related activities should be done with full consideration of risks involved. Winning4Fun accepts no liability for money losses arising from any activities or services used, and by using this website and services, you agree that this shall be done at your sole risk.</p>
+
+    <p>Individuals that register their personal details with Net4fun agree to receive gaming-related newsletters. Net4fun contains third-party content about, and links to, third parties and their websites that are not owned or controlled by Net4fun. Net4fun has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third-party content or websites or any of their contents. Winning4Fun has strong stand against spamming. Click here to read our <a href="PrivacyPolicy.pdf" target="_blank">Privacy Policy</a>.</p>
+</section>
+
+</body>
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/45590864.js"></script>
+</html>
